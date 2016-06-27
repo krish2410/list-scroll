@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:primaryType="cq:Dialog"
+    title="List Scroll"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <title
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Title"
+            name="./title"
+            xtype="textfield"/>
+		<quickLinks
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Quick Links"
+		    name="./quickLinks"
+		    xtype="multifield">
+		    <fieldConfig
+                jcr:primaryType="cq:Widget"
+                border="{Boolean}false"
+                xtype="multifieldpanel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <linkText
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Quick Text"
+                        key="text"
+                        name="./linkText"
+                        xtype="textfield"/>
+                    <linkPath
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Link Path"
+                        key="linkPath"
+                        name="./linkPath"
+                        rootPath="/content"
+                        width="120"
+                        xtype="pathfield"/>
+                </items>
+            </fieldConfig>
+        </quickLinks>           
+    </items>
+</jcr:root>
